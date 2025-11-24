@@ -1,0 +1,47 @@
+Title:
+Candidate Recruitment | New Candidate | Shortlist | Error after clicking save button on shortlist confirmation view
+
+Environment:
+- Application: OrangeHRM (Open-source demo)
+- Module: Recruitment → Candidate Workflow
+- Browser: Chrome Version 142.0.7444.176 (Official Build) (arm64)
+- OS: Mac
+- Test Data: see: /src/test-data/candidate.data.ts
+
+Preconditions:
+- User is logged into the system.
+- User is on the Recruitment page.
+
+Test Case Reference:
+TC-101 –  Candidate Recruitment 
+
+Steps to Reproduce:
+1. Open the Recruitment page.
+2. Click “Add” to create a new candidate.
+3. Fill in all required fields with valid data.
+4. click the "save" button.
+5. Wait for the toast “Successfully Saved”.
+6. Click the “Shortlist” button on the Candidate Application Stage view.
+7. Wait for the system to display the Shortlist Confirmation view.
+8. Click the “save” button.
+
+Actual Result:
+- Toast unexpected error occurs
+- application stops on loading animation for shortlist candidate page 
+- There is "Request failed with status code 500" error in the console" 
+
+ 
+Expected Result:
+- Toast message “Successfully Saved” should appear.
+- The candidate’s status should update to “Shortlisted”.
+- The system should automatically navigate back to the Candidates list page.
+- Application should return to 
+
+Impact:
+- Shortlist workflow cannot be completed.
+- Candidate status remains inconsistent.
+- Recruitment process is blocked.
+
+Severity:
+- Critical
+
