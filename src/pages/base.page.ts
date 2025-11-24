@@ -1,19 +1,24 @@
-import { Page } from "@playwright/test";
+import { Page } from '@playwright/test';
 
 export class BasePage {
   url: string;
 
   constructor(protected page: Page) {
-    this.url = "";
+    this.url = '';
   }
 
-  async goto(parameters = ""): Promise<void> {
+  async goto(parameters = ''): Promise<void> {
     await this.page.goto(`${this.url}${parameters}`);
   }
 
   async getTitle(): Promise<string> {
     await this.page.waitForLoadState();
     return this.page.title();
+  }
+
+  async getHeading(heading: string): Promise<string> {
+    await this.page.waitForLoadState();
+    return this.page.getByRole('heading', { name: heading }).innerText();
   }
 
   async waitForPageToLoadUrl(): Promise<void> {
