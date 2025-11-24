@@ -8,7 +8,12 @@
     "lint": "npx eslint . --max-warnings=0",
     "format:check": "npx prettier . --check \"!**.ts\"",
     "prepare": "husky",
-    "codegen": "npx playwright codegen 'https://opensource-demo.orangehrmlive.com/'"
+    "codegenHRM": "npx playwright codegen 'https://opensource-demo.orangehrmlive.com/'",
+    "test:all": "npx playwright test",
+    "test:login": "npx playwright test --grep @login",
+    "test:sideMenu": "npx playwright test --grep @sideMenu",
+    "test:candidateRecruitment": "npx playwright test --grep @CandidateRecruitment",
+    "test:report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
