@@ -1,0 +1,27 @@
+SIDE MENU – TEST CASES
+
+TC-006 – Recruitment button navigates to Recruitment page
+Preconditions:
+- User is logged in
+- User is not on Recruitment page
+Steps:
+1. Locate the Side Menu.
+2. Click the "Recruitment" button.
+3. Wait for the Recruitment page to load.
+Expected Result:
+- System navigates to the Recruitment section.
+- URL and page layout change according to the Recruitment module.
+- No errors or blocking UI elements appear.
+
+TC-007 – Dashboard button navigates to Dashboard page
+Preconditions:
+- User is logged in.
+- user is not on Dashboard page
+Steps:
+1. Locate the Side Menu.
+2. Click the "Dashboard" button.
+3. Wait for Dashboard page to load.
+Expected Result:
+- System navigates to the Dashboard section.
+- URL and page layout change according to the Dashboard module.
+- No errors or blocking UI elements appear.

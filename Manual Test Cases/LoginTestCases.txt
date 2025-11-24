@@ -1,0 +1,67 @@
+LOGIN MODULE – TEST CASES
+
+TC-001 – Login with correct credentials
+Preconditions:
+- User exists with valid username and password.
+Steps:
+1. Navigate to the Login page.
+2. Enter a valid username.
+3. Enter a valid password.
+4. Click the Login button.
+Expected Result:
+- User is redirected to the Dashboard.
+- Heading contains "Dashboard".
+Expected Behavior:
+- System authenticates user successfully.
+- No error messages appear.
+- User session is created.
+
+TC-002 – Login with incorrect credentials
+Preconditions:
+Steps:
+1. Navigate to Login page.
+2. Enter invalid username or password.
+3. Click Login.
+Expected Result:
+- Error "Invalid credentials" is displayed.
+- System refuses authentication.
+- User remains on Login page.
+
+TC-003 – Login with empty username
+Preconditions:
+- User leaves username empty.
+Steps:
+1. Open Login page.
+2. Leave username blank.
+3. Enter valid password.
+4. Click Login.
+Expected Result:
+- Error "Required" appears under username.
+- Validation prevents login attempt.
+
+TC-004 – Login with empty password
+Preconditions:
+- Password field is empty.
+Steps:
+1. Go to Login page.
+2. Enter valid username.
+3. Leave password blank.
+4. Click Login.
+Expected Result:
+- Error "Required" appears under password.
+- Client-side validation blocks form.
+- No authentication attempt is made.
+
+TC-005 – Login with empty username and password
+Preconditions:
+- No credentials entered.
+Steps:
+1. Visit Login page.
+2. Leave username and password blank.
+3. Click Login.
+Expected Result:
+- Username error "Required".
+- Password error "Required".
+Expected Behavior:
+- System displays both validation messages.
+- User remains on Login page.

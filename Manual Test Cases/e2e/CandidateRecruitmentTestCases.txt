@@ -1,0 +1,28 @@
+TC-101 –  Candidate Recruitment 
+
+Preconditions:
+- The user is logged into the system.
+- The user is currently on the Recruitment page.
+- Valid candidate test data is available for creating a new candidate.
+
+Test Steps:
+1. Click the “Add” button on the Recruitment page to start creating a new candidate.
+2. Fill in all candidate fields with valid data.
+3. Click the save button
+4. Wait for the confirmation toast and verify that “Successfully Saved” appears.
+5. The system automatically navigates to the Candidate Application Stage view.
+6. Click the “Shortlist” button to mark the candidate as shortlisted.
+7. Wait for the system to open the shortlist confirmation view.
+8. Click “save” to confirm the action.
+9. Wait for the toast message and verify that “Successfully Saved” appears again.
+10. The system automatically returns to the main Candidates list page.
+11. Verify that the application returned to candidates view.
+
+Expected Result:
+- The candidate is successfully added to the system.
+- The candidate’s status updates to “Shortlisted”.
+- Both the Add and Shortlist confirmation steps display the toast message “Successfully Saved”.
+- The system returns to the main Candidates list page.
+- Application returns to candidates view.
+
+
