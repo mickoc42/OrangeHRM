@@ -5,7 +5,7 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 export default [
-  { ignores: ['package-lock.json', 'playwright-report/**', 'test-results/**'] },
+  { ignores: ['package-lock.json', 'playwright-report/**', 'test-results/**', '.github/workflows/**'] },
   { files: ['**/*.ts'] },
   { languageOptions: { globals: globals.node } },
   pluginJs.configs.recommended,

@@ -2,3 +2,4 @@ package-lock.json
 playwright-report
 test-results
 eslint.config.mts
+.github/workflows/
