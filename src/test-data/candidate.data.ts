@@ -7,8 +7,7 @@ export const validCandidateData: CandidateModel = {
   vacancy: Vacancy.SeniorQaLead,
   email: 'john.doe@example.com',
   contactNumber: '+1 7655788046',
-  resumeFilePath:
-    '/Users/michalkochanowski/Desktop/TestProjects/OrangeHRM/src/test-data/testCv.docx',
+  resumeFilePath: 'src/test-data/testCv.docx',
   keywords: 'JavaScript, TypeScript',
   dateOfApplication: '',
   notes: 'Experienced developer with a focus on frontend technologies.',
