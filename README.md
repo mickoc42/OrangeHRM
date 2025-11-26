@@ -24,3 +24,38 @@ Playwright Tests candidateRecruitment - run CandidateRecruitment tests
 
 candidateRecruitment test fails, this is desired, and the Bug Report for it is in:
 /Manual Test Cases/e2e/Bugs/
+
+### Installation and setup
+
+- (optional) install VSC recommended plugins
+- install dependencies: `npm install`
+- setup Playwright with: `npx playwright install --with-deps chromium`
+- setup husky with: `npx husky`
+- prepare local env file: `cp .env-template .env`
+- copy application main URL as value of `BASE_URL` variable in `.env` file
+
+## Use
+
+Run all tests:
+
+```
+npm run test:all
+```
+
+Run login tests:
+
+```
+npm run test:login
+```
+
+Run sideMenu tests:
+
+```
+npm run test:sideMenu
+```
+
+Run candidateRecruitment tests:
+
+```
+npm run test:candidateRecruitment
+```
