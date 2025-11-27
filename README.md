@@ -12,6 +12,7 @@ https://excalidraw.com/#json=MmK9k2g9CUf2QpQn-t2ZN,FDEfH9FykyZrI_h4ssMVmA
 ## Github actions
 
 You can run all workflows through github actions on repository:
+
 Playwright Tests - run all available tests
 
 Playwright Tests login - run login tests
