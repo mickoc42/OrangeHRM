@@ -24,4 +24,8 @@ export class BasePage {
   async waitForPageToLoadUrl(): Promise<void> {
     await this.page.waitForURL(this.url);
   }
+
+  async getUrl(): Promise<string> {
+    return this.page.url();
+  }
 }

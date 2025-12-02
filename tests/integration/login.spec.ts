@@ -79,4 +79,15 @@ test.describe('Login tests', () => {
       expect.soft(loginErrorPassword).toContain(expectedLoginError);
     }
   );
+
+  test('Logout after login', { tag: '@logout' }, async ({ loginPage }) => {
+    // Arrange
+    const dashboardPage = await loginPage.login(Users.testUser1);
+
+    // Act
+    const returnedLoginPage = await dashboardPage.logout();
+
+    // Assert
+    expect(await returnedLoginPage.getUrl()).toContain('/auth/login');
+  });
 });
