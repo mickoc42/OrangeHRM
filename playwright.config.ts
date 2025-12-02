@@ -16,6 +16,10 @@ export default defineConfig({
   workers: undefined,
   reporter: 'html',
   use: {
+    locale: 'en-US',
+    launchOptions: {
+      args: ['--lang=en-US'],
+    },
     baseURL: BASE_URL,
     actionTimeout: 0,
     trace: 'retain-on-failure',
