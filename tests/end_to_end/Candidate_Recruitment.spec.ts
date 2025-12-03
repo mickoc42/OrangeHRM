@@ -10,16 +10,18 @@ test.describe('Recruitment lifecycle tests', () => {
     'Add a new candidate',
     { tag: '@CandidateRecruitment' },
     async ({ RecruitmentPage }) => {
+      // Arrange
       let candidateApplicationStageView: CandidateApplicationStageView;
       let candidateShortListView: CandidateShortListView;
       let recruitmentPage: RecruitmentPage;
 
       await test.step('Add Candidate', async () => {
+        // Act
         const addCandidateView =
           await RecruitmentPage.clickAddCandidateButton();
         candidateApplicationStageView =
           await addCandidateView.Add(validCandidateData);
-
+        // Assert
         await expect(addCandidateView.toast).toBeVisible();
         await expect(addCandidateView.toast).toContainText(
           'Successfully Saved'
@@ -27,12 +29,15 @@ test.describe('Recruitment lifecycle tests', () => {
       });
 
       await test.step('Shortlist Candidate', async () => {
+        // Act
         candidateShortListView =
           await candidateApplicationStageView.shortlistCandidate();
       });
 
       await test.step('Confirm Shortlist', async () => {
+        // Act
         recruitmentPage = await candidateShortListView.confirmShortlist();
+        // Assert
         await expect(candidateShortListView.toast).toBeVisible();
         await expect(candidateShortListView.toast).toContainText(
           'Successfully Saved'
